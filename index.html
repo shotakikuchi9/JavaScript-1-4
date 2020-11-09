@@ -14,26 +14,29 @@
         { task: "散歩する", type: "運動" },
         ];
 
-                    
-      function addTask() {
-        const addedTask = { task: prompt("タスクを追加してください"), type: prompt("ジャンルを追加してください") };
-
-        tasks.push(addedTask);
-        alert("新しいタスクを追加しました。");
-      }
-
-
       function show() {
         console.log("=========================\n現在持っているタスク\n=========================");
         for (let i = 0; i < tasks.length; i++) {
           console.log(`${i}　：　[内容]${tasks[i].task}、[ジャンル]${tasks[i].type}`);
           }
         }
-
+      function addTask() {
+        const addedTask = { task: prompt("タスクを追加してください"), type: prompt("ジャンルを追加してください") };
+        tasks.push(addedTask);
+        alert("新しいタスクを追加しました。");
+      }
+      
+      show();
       addTask();
       show(); 
-
-
+      prompt("確認,追加,削除,終了のいずれかを入力してください");
+    
     </script>
   </body>
 </html> 
+                    
+
+
+
+
+
